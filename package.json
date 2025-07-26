@@ -1,0 +1,35 @@
+{
+  "name": "railbird-app",
+  "version": "1.0.0",
+  "description": "AI-powered conversational handicapping assistant for horse racing",
+  "private": true,
+  "workspaces": [
+    "mobile",
+    "backend",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:mobile\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:mobile": "cd mobile && npm start",
+    "build": "npm run build:backend && npm run build:mobile",
+    "build:backend": "cd backend && npm run build",
+    "build:mobile": "cd mobile && npm run build",
+    "install:all": "npm install && npm run install:backend && npm run install:mobile",
+    "install:backend": "cd backend && npm install",
+    "install:mobile": "cd mobile && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "horse-racing",
+    "handicapping",
+    "ai",
+    "mobile-app",
+    "react-native",
+    "betting"
+  ],
+  "author": "Railbird Team",
+  "license": "MIT"
+}
